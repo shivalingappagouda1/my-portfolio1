@@ -1,6 +1,6 @@
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { useEffect, useState } from "react";
-import profilePhoto from "./assets/profile.jpeg";
+import profilePhoto from "./assets/image.png";
 
 const particles = Array.from({ length: 28 });
 
