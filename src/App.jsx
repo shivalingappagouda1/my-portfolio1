@@ -1,6 +1,7 @@
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { useEffect, useState } from "react";
 import profilePhoto from "./assets/image.png";
+import ticTacToePhoto from "./assets/tic-tac-toe.png";
 
 const particles = Array.from({ length: 28 });
 
@@ -616,27 +617,55 @@ function App() {
         </div>
 
         <motion.div
-          className="project-placeholder"
-          initial={{ opacity: 0, scale: 0.96 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          whileHover={{ y: -5 }}
+          className="project-card"
+          initial={{ opacity: 0, y: 35, scale: 0.96 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          whileHover={{ y: -6 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
-          <motion.div
-            className="project-number"
-            animate={{ y: [0, -6, 0] }}
-            transition={{ duration: 2.5, repeat: Infinity }}
-          >
-            01
-          </motion.div>
+          <div className="project-image-wrapper">
+            <img
+              src={ticTacToePhoto}
+              alt="Tic Tac Toe"
+              className="project-image"
+            />
+          </div>
 
-          <div>
-            <h3>Projects Coming Soon</h3>
-            <p>
-              Currently looking for the right opportunities to showcase
-              project work and practical applications of my technical skills.
+          <div className="project-info">
+            <span className="project-tag">FEATURED PROJECT</span>
+            <h3 className="project-title">Tic Tac Toe</h3>
+            <p className="project-description">
+              A Flutter-based Tic Tac Toe game featuring computer opponents with
+              multiple difficulty levels, local 1 vs 1 gameplay, online multiplayer,
+              and private online rooms using room codes.
             </p>
+
+            <div className="project-actions">
+              <motion.a
+                href="https://my-portfolio1-rust-nine.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary project-btn"
+                whileHover={{ y: -3 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                <span>Live Demo</span>
+                <span className="btn-arrow">↗</span>
+              </motion.a>
+
+              <motion.a
+                href="https://github.com/shivalingappagouda1/tic-tac-toe.git"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-secondary project-btn"
+                whileHover={{ y: -3 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                <span>GitHub</span>
+                <span className="btn-arrow">↗</span>
+              </motion.a>
+            </div>
           </div>
         </motion.div>
       </RevealSection>
