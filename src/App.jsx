@@ -643,7 +643,7 @@ function App() {
 
             <div className="project-actions">
               <motion.a
-                href="https://my-portfolio1-rust-nine.vercel.app/"
+                href="https://tic-tac-toe-two-theta-55.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
                 className="btn btn-primary project-btn"
